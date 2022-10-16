@@ -1,13 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { useState, useEffect } from "react";
+import NavComponent from "./components/Nav/index";
+import userData from "./components/userdata/index";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [showData, setShowData] = useState(userData);
+  const [keyWord, setKeyword] = useState("");
 
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <NavComponent data={userData} />
     </div>
   );
 }

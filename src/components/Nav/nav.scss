@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
+.nav {
+  height: 120px;
+  width: 390px;
+  background-color: #f8f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.profile {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  &__intro {
+    width: 100%;
+    color: rgb(179, 179, 179);
+    margin: 5px 0;
+  }
+
+  &__name {
+    margin: 5px 0;
+  }
+}
+
+.search {
+  position: relative;
+  bottom: 20px;
+
+  &__input {
+    border: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    outline: transparent;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 1px;
+    top: 4px;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+
+  &__icon:active {
+    transform: scale(0.95);
+  }
+}
