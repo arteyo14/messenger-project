@@ -1,14 +1,32 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import userData from "../userdata/index";
 import "./nav.scss";
 
-function NavComponent(props) {
+function NavComponent({ keyWord, setKeyWord }) {
+  const [word, setWord] = useState("");
+
+  useEffect(() => {
+    let time = new Date().getHours();
+    if (time >= 6 && time < 12) {
+      setWord("Good Morning!");
+    } else if (time === 12) {
+      setWord("Time to Lunch!");
+    } else if (time > 12 && time < 16) {
+      setWord("Good Afternoon!");
+    } else if (time >= 16 && time < 20) {
+      setWord("Good Evening!");
+    } else {
+      setWord("Night Time!");
+    }
+  }, [word]);
+
   return userData.map((user) => {
     if (user.id === 13) {
       let userName = `${user.first_name} ${user.last_name.charAt(0)}.`;
+
       return (
-        <header className="nav">
+        <header className="nav" key={user.id}>
           <div className="profile">
             <img
               src={user.avatar}
@@ -16,12 +34,18 @@ function NavComponent(props) {
               className="profile__img"
             />
             <div className="profile__detail">
-              <p className="profile__intro">Good Morning!</p>
+              <p className="profile__intro">{word}</p>
               <p className="profile__name">{userName}</p>
             </div>
           </div>
           <div className="search">
-            <input type="text" className="search__input" />
+            <input
+              type="text"
+              className="search__input"
+              placeholder="search..."
+              value={keyWord}
+              onChange={setKeyWord}
+            />
             <button className="search__icon">
               <svg
                 width="15"

@@ -1,0 +1,35 @@
+.messenger {
+  width: 100%;
+  height: 510px;
+  background-color: #fff;
+  overflow: scroll;
+  border-radius: 10px 10px 0;
+  z-index: 0;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &__box:hover {
+    background-color: rgb(246, 246, 246);
+  }
+
+  &__img {
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__username {
+    margin-bottom: 5px;
+  }
+
+  &__demo {
+    color: #cecece;
+    font-style: italic;
+  }
+}

@@ -3,7 +3,7 @@
 .nav {
   height: 120px;
   width: 390px;
-  background-color: #f8f6f9;
+  background-color: #f29c9c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +32,14 @@
 
   &__intro {
     width: 100%;
-    color: rgb(179, 179, 179);
+    color: #fff;
     margin: 5px 0;
+    font-size: 12px;
   }
 
   &__name {
     margin: 5px 0;
+    font-weight: bold;
   }
 }
 
@@ -48,14 +50,14 @@
   &__input {
     border: transparent;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
     outline: transparent;
   }
 
   &__icon {
     position: absolute;
     right: 1px;
-    top: 4px;
+    top: 8px;
     background-color: transparent;
     border: transparent;
     cursor: pointer;
